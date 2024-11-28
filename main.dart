@@ -22,7 +22,7 @@ void main() {
 //#############################
 
   int seatsPerRow = 12;
-  int seatNumber = 47;
+  int seatNumber = 49;
   int ticketPrice = seatNumber%2 == 0 ? 12 : 15;
 
   bool isFound = false;
@@ -39,6 +39,9 @@ void main() {
   print('Reihe: $currentRow');
   print('Platz: $seatNumber');
   print('Preis: $ticketPrice');
+  int dieReihe = (seatNumber ~/seatsPerRow);
+  if (seatNumber%seatsPerRow!=0) dieReihe++;
+  print('Andere Reihenlösung: $dieReihe');
 
 
 }
